@@ -16,6 +16,9 @@
               </template>
             </el-table-column>
           </template>
+          <template v-else-if="item.type === 'img'">
+            <slot :name="item.slotName"></slot>
+          </template>
           <template v-else-if="item.type === 'handle'">
             <el-table-column align="center" :label="item.label" :width="item.width">
               <template #default="scoped">

@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <h2>list</h2>
+    <h2>暂时还没有故事~</h2>
   </div>
 </template>
 
