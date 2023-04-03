@@ -44,9 +44,9 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
+// import { storeToRefs } from 'pinia'
 import { reactive, ref } from 'vue'
-import useMainStore from '@/store/main/main'
+// import useMainStore from '@/store/main/main'
 import userSystemStore from '@/store/main/system/system'
 
 // 0.定义prop
@@ -75,9 +75,9 @@ const isNewRef = ref(true)
 const editData = ref()
 
 // 2. 获取 roles / department数据
-const mainStore = useMainStore()
+// const mainStore = useMainStore()
 const systemStore = userSystemStore()
-const { entireDepartments } = storeToRefs(mainStore)
+// const { entireDepartments } = storeToRefs(mainStore)
 
 // 2. 定义设置 dialogVisible 方法
 function setModalVisible(isNew: boolean = true, itemData?: any) {

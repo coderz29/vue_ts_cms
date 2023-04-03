@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="department">
     <page-search @query-click="handleQueryClick" @reset-click="handleResetClick" />
     <page-content ref="contentRef" @new-click="handleNewClick" @edit-click="handleEditClick" />
@@ -31,4 +31,4 @@ function handleEditClick(itemData: any) {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped></style> -->
