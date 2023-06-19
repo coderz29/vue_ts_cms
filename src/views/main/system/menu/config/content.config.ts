@@ -6,10 +6,10 @@ const contentConfig = {
   },
   propsList: [
     { label: '菜单名称', prop: 'name', width: '140px' },
-    { label: '级别', prop: 'type', width: '80px' },
-    { label: '菜单url', prop: 'url', width: '150px' },
-    { label: '菜单icon', prop: 'icon', width: '200px' },
-    { label: '权限', prop: 'permission', width: '150px' },
+    { label: '级别', prop: 'type', width: '70px' },
+    { label: '菜单url', prop: 'url', width: '210px' },
+    { label: '菜单icon', prop: 'icon', width: '190px' },
+    { label: '权限', prop: 'permission', width: '205px' },
     { type: 'timer', label: '创建时间', prop: 'createAt' },
     { type: 'timer', label: '更新时间', prop: 'updateAt' },
     { type: 'handle', label: '操作', width: '150px' }

@@ -4,27 +4,27 @@ enum CacheType {
 }
 
 class Cache {
-  stroage: Storage
+  storage: Storage
 
   constructor(type: CacheType) {
-    this.stroage = type === CacheType.Local ? localStorage : sessionStorage
+    this.storage = type === CacheType.Local ? localStorage : sessionStorage
   }
   setCache(key: string, value: any) {
     if (value) {
-      this.stroage.setItem(key, JSON.stringify(value))
+      this.storage.setItem(key, JSON.stringify(value))
     }
   }
   getCache(key: string) {
-    const value = this.stroage.getItem(key)
+    const value = this.storage.getItem(key)
     if (value) {
       return JSON.parse(value)
     }
   }
   removeCache(key: string) {
-    this.stroage.removeItem(key)
+    this.storage.removeItem(key)
   }
   clear() {
-    this.stroage.clear()
+    this.storage.clear()
   }
 }
 

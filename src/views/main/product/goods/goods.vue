@@ -11,10 +11,8 @@
       @new-click="handleNewClick"
       @edit-click="handleEditClick"
     >
-      <template #imgUrl>
-        <el-table-column align="center" label="图片">
-          <img class="img" :src="goodsList[0].imgUrl" />
-        </el-table-column>
+      <template #imgUrl="scoped">
+        <img class="img" :src="scoped.row?.imgUrl" />
       </template>
     </page-content>
     <page-modal :modal-config="modalConfig" ref="modalRef"></page-modal>
@@ -40,15 +38,10 @@ import usePageModal from '@/hooks/usePageModal'
 // 编辑关系
 const { contentRef, handleQueryClick, handleResetClick } = usePageContent()
 const { modalRef, handleEditClick, handleNewClick } = usePageModal()
-
-// 图片
-const goodsListStore = useGoodsListStore()
-goodsListStore.getGoodsListAction()
-const { goodsList } = storeToRefs(goodsListStore)
 </script>
 
 <style lang="less" scoped>
 .img {
-  width: 60px;
+  width: 50px;
 }
 </style>
