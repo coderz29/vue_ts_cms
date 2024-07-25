@@ -67,10 +67,14 @@ const { amountList, goodsCategoryCount, goodsCategorySale, goodsCategoryFavor, g
 
 // 获取数据
 const showGoodsCategoryCount = computed(() => {
-  return goodsCategoryCount.value.map((item) => ({
-    name: item.name,
-    value: item.goodsCount
-  }))
+  let all = goodsCategoryCount.value.map((item) => {
+    if (item.name.includes('测试') || item.name.includes('Polo')) {
+      return
+    } else {
+      return { name: item.name, value: item.goodsCount }
+    }
+  })
+  return all
 })
 // 折线图
 const showGoodsCategorySale = computed(() => {
